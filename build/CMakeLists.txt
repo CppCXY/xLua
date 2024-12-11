@@ -156,7 +156,7 @@ if (APPLE)
         )
 		set_xcode_property (xlua IPHONEOS_DEPLOYMENT_TARGET "7.0" "all")
     else ()
-        ADD_DEFINITIONS(-DLUA_USE_MACOSX) #osx platform emmylua debugger must have this option or can not load cpath
+        ADD_DEFINITIONS(-DLUA_USE_MACOSX -DLUA_USE_DLOPEN) #osx platform emmylua debugger must have this option or can not load cpath
         if (BUILD_SILICON)
            set(CMAKE_OSX_ARCHITECTURES arm64)
 
